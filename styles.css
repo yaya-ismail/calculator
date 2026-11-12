@@ -1,0 +1,122 @@
+
+/* Remove default browser spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Main page styling */
+body {
+    font-family: Arial, sans-serif;
+    background: #e8edf5;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+}
+
+/* Calculator container */
+.calculator {
+    background: #1e293b;
+    padding: 25px;
+    border-radius: 20px;
+
+    width: 320px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Calculator heading */
+.calculator h1 {
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* Calculator display */
+#display {
+    width: 100%;
+    height: 65px;
+
+    background: #f8fafc;
+    border: none;
+    border-radius: 10px;
+
+    margin-bottom: 20px;
+    padding: 15px;
+
+    font-size: 28px;
+    text-align: right;
+    color: #1e293b;
+}
+
+/* Buttons container */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+/* All calculator buttons */
+.buttons button {
+    height: 55px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #334155;
+    color: white;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+/* Button hover effect */
+.buttons button:hover {
+    background: #475569;
+    transform: scale(1.05);
+}
+
+/* Operator buttons */
+.buttons button:nth-child(4n) {
+    background: #f59e0b;
+}
+
+.buttons button:nth-child(4n):hover {
+    background: #d97706;
+}
+
+/* Clear and delete buttons */
+.buttons button:nth-child(1),
+.buttons button:nth-child(2) {
+    background: #ef4444;
+}
+
+.buttons button:nth-child(1):hover,
+.buttons button:nth-child(2):hover {
+    background: #dc2626;
+}
+
+/* Equals button */
+.buttons button:nth-child(19) {
+    background: #16a34a;
+}
+
+.buttons button:nth-child(19):hover {
+    background: #15803d;
+}
+
+/* Smaller screens */
+@media (max-width: 360px) {
+    .calculator {
+        width: 95%;
+        padding: 15px;
+    }
+}
